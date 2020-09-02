@@ -1,0 +1,93 @@
+#slider {
+    width: 100%;
+    overflow: hidden;
+
+
+    @media screen and (max-width: $bp-desk-medium) {
+        font-size: 2em !important;
+    }
+
+    .scroll {
+        position: relative;
+        width: 100%;
+        display: flex;
+        div {
+            font-family: "Raleway", sans-serif;
+            -webkit-text-stroke: 1px white;
+            color: transparent;
+            font-weight: $bold;
+            text-transform: uppercase;
+            white-space: nowrap;
+            animation: animate 40s linear infinite;
+            font-size: inherit;
+
+            .colorGradient {
+                background: -webkit-linear-gradient($pink, $blue);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                color: transparent;
+                -webkit-text-stroke: transparent
+            }
+            
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0; 
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background: linear-gradient(to right, $pink, $blue);
+            }
+            &:before {
+                content: "";
+                position: absolute;
+                bottom: 0; 
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background: linear-gradient(to right, $pink, $blue);
+            }
+
+        }
+        div:nth-child(2) {
+            animation: animate2 40s linear infinite;
+            animation-delay: -40s;
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0; 
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background: linear-gradient(to right, $blue, $pink);
+            }
+            &:before {
+                content: "";
+                position: absolute;
+                bottom: 0; 
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background: linear-gradient(to right, $blue, $pink);
+            }
+        }
+    }
+
+    @keyframes animate {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+    @keyframes animate2 {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+}

@@ -1,0 +1,72 @@
+@import "_variables.scss";
+@import "_reset.scss";
+@import "_svg.scss";
+@import "blob.scss";
+@import "menu.scss";
+
+//Structure
+@import "structure/header.scss";
+@import "structure/footer.scss";
+@import "structure/404.scss";
+@import "structure/slider.scss";
+
+//Homepage
+@import "homepage/section-welcome.scss";
+@import "homepage/section-projects.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: $black;
+  margin: 20px 50px;
+  color: $white;
+  @media screen and (max-width: $bp-tablet) {
+    margin: 20px 30px;
+  }
+}
+
+body {
+
+  .up {
+    text-transform: uppercase;
+  }
+
+  //fonts & responsive & animations
+  .hover-font {
+    &::after {
+      position: absolute;
+      content: "";
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: $white;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.5s;
+    }
+    &:hover {
+      color: #95a5a6;
+    }
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+  h1 {
+    font-size: "Raleway", sans-serif;
+    font-weight: $semibold;
+    color: $white;
+    font-size: 3em;
+    @media screen and (max-width: $bp-desk-medium) {
+      font-size: 30px;
+      text-align: center;
+    }
+    @media screen and (max-width: $bp-tablet) {
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+}
