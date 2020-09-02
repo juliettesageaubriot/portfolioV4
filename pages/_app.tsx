@@ -1,9 +1,15 @@
 // import App from "next/app";
+import Layout from '../components/Layout'
+
 import type { AppProps /*, AppContext */ } from 'next/app'
 import "../assets/_basic.scss"
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <Layout title="Juliette SAGE--AUBRIOT's portfolio">
+      <Component {...pageProps} />
+    </Layout>
+  )
 }
 
 // Only uncomment this method if you have blocking data requirements for
