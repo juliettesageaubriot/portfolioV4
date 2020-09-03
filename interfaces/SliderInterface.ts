@@ -1,6 +1,12 @@
 export interface SliderProps {
-    word1?: string,
-    word2?: string,
-    word3?: string
-    word4?: string
-  }
+  opacity: number;
+  vertical: number;
+  fontSize: number;
+  // J'ai rajouté un nouveau type, comme ça tu définis pour chaque mot si tu veux le gradient ou pas
+  words: SliderWord[];
+}
+
+export interface SliderWord {
+  label: string,
+  gradient: boolean
+}
