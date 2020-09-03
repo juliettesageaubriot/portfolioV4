@@ -1,13 +1,23 @@
 import * as React from 'react'
+import { SliderWord } from '../../interfaces/SliderInterface'
 import Slider from "../structure/Slider"
 
+/**
+ * Pour le type de sliderArray tu as 2 façon de faire :
+ * - Soit directement le type SliderWord[]
+ *
+ * - Soit le type SliderProps['words'] qui va faire référence à la clé 'words' dans le type SliderProps.
+ * Cette solution à l'avantage de mettre à jour le type de sliderArray si le type de 'words' change par la suite
+ */
 
-
-const sliderArray: WelcomeProps[] = [
+const sliderArray: SliderWord[] = [
   {
-    word1: 'GOTOANDBUZZ',
-    word2: 'Gobelins Paris'
-
+    label: 'GOTOANDBUZZ',
+    gradient: true
+  },
+  {
+    label: 'Gobelins Paris',
+    gradient: false
   }
 ]
 
@@ -22,7 +32,7 @@ const Welcome = ({ }) => (
               opacity={1}
               vertical={0}
               fontSize={3}
-              sliderArray={sliderArray}
+              words={sliderArray}
             />
           </div>
         </div>
@@ -31,7 +41,7 @@ const Welcome = ({ }) => (
             opacity={0.3}
             vertical={90}
             fontSize={5}
-            sliderArray={sliderArray}
+            words={sliderArray}
           />
         </div>
       </div>
