@@ -12,6 +12,7 @@ const Slider = ({ opacity, vertical, fontSize, words }: SliderProps) => {
    * On créer la bande qui défile une fois, pour réutiliser la même variable pour le clone.
    * Comme ça, si tu modifies plus tard l'original, le clone est automatiquement à jour
    */
+
   const textStrip =
     <div>
       {
@@ -27,8 +28,11 @@ const Slider = ({ opacity, vertical, fontSize, words }: SliderProps) => {
     <div id="slider" className="slider"
       style={style}>
       <div className="scroll text1" >
+        
         {textStrip}
         {/* Le clone */}
+        {textStrip}
+        {textStrip}
         {textStrip}
       </div>
     </div>

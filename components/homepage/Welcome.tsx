@@ -21,6 +21,18 @@ const sliderArray: SliderWord[] = [
   }
 ]
 
+const sliderBackground: SliderWord[] = [
+  {
+    label: 'Front-End Developper',
+    gradient: true
+  },
+  {
+    label: 'Creative Coder',
+    gradient: false
+  }
+]
+
+
 const Welcome = ({ }) => (
   <section id='sectionWelcome' className='section section_welcome' data-template='sectionWelcome'>
     <div className="wrapp">
@@ -32,7 +44,7 @@ const Welcome = ({ }) => (
               opacity={1}
               vertical={0}
               fontSize={3}
-              words={sliderArray}
+              words={sliderBackground}
             />
           </div>
         </div>
