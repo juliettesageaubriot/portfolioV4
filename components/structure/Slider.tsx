@@ -15,7 +15,7 @@ const Slider = ({ opacity, vertical, fontSize, words }: SliderProps) => {
   const textStrip =
     <div>
       {
-        words.map((word, i) => {
+        words?.map((word, i) => {
           return word.gradient
             ? <span key={i}>{word.label} &nbsp;-&nbsp;</span>
             : <span key={i}> <span className="colorGradient">{word.label}</span> &nbsp;-&nbsp;</span>

@@ -1,7 +1,23 @@
 import React from 'react';
 import Slider from "../components/structure/Slider";
+import { SliderWord } from '../interfaces/SliderInterface';
 
 export default function Custom404() {
+
+  const words:SliderWord[] = [
+    {
+      label: "Are you lost ?",
+      gradient: true
+    },
+    {
+      label: " 404",
+      gradient: false
+    },
+    {
+      label: "Allo ?",
+      gradient: true
+    }
+  ]
 
   return (
     <section id="main404" className="section section_404" data-template="section404">
@@ -11,9 +27,7 @@ export default function Custom404() {
             opacity={0.5}
             vertical={0}
             fontSize={4}
-            word1="Are you lost ?"
-            word2="404"
-            word3="Allo ?"
+            words={words}
           />
           <a href="/" className="link link_homepage btn"
           >Return to the homepage</a>
