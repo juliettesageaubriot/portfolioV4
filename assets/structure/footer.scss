@@ -1,0 +1,41 @@
+[data-template="sectionFooter"] {
+  .footer {
+    background: $black;
+    &_content {
+      display: flex;
+      flex-flow: row wrap;
+      align-content: center;
+      justify-items: center;
+    }
+    &__mentions {
+      width: 50%;
+      background-color: red;
+      ul {
+        display: flex;
+        flex-flow: row wrap;
+        align-content: center;
+        justify-items: center;
+        li {
+          font-size: 15px;
+          position: relative;
+          list-style: none;
+          padding: 5px;
+        }
+      }
+    }
+    &__medias {
+      width: 50%;
+      ul {
+        display: flex;
+        flex-flow: row wrap;
+        align-content: center;
+        justify-items: center;
+        li {
+          font-size: 15px;
+          position: relative;
+          list-style: none;
+        }
+      }
+    }
+  }
+}
