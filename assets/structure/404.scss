@@ -2,14 +2,19 @@
   position: relative;
   //la hauteur de la page moins les padding 20px * 2 et la
   // la hauteur du header et la hauteur du footer
-  height: calc(100vh - (40px));
+  height: calc(100vh - (40px) - 70px - 68px);
+
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
 
   .slider {
-    &_wrapp {
-      height: calc(100vh - (130px));
+    &_wrap {
+      // height: calc(100vh - (130px));
+      height: 100%;
     }
     &__content {
-      height: 50%;
+      height: 90%;
       display: flex;
       align-items: center;
       flex-flow: column nowrap;
@@ -21,6 +26,7 @@
           font-family: "Raleway", sans-serif;
           font-size: 20px;
           color: $white;
+          padding-top: 20px;
           @media screen and (max-width: $bp-smartphone-xlarge) {
             font-size: 15px;
           }

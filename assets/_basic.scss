@@ -1,3 +1,5 @@
+@import "./_lib/_font-awesome/fontawesome";
+
 @import "_variables.scss";
 @import "_reset.scss";
 @import "_svg.scss";
@@ -28,12 +30,24 @@ html {
 }
 
 body {
+  //Uppercase
   .up {
     text-transform: uppercase;
   }
 
-  //fonts & responsive & animations
-  .hover-font {
+  //Skin les <a>
+
+  a {
+    color: $white;
+  }
+
+  //Reset Ul qui ont un padding-left: 30px
+  ul {
+    padding: 0;
+  }
+
+  //Animation du trait sous certains links
+  .hover-line {
     &::after {
       position: absolute;
       content: "";
@@ -47,15 +61,25 @@ body {
       transition: transform 0.5s;
     }
     &:hover {
-      color: #95a5a6;
+      color: $white;
     }
     &:hover::after {
       transform: scaleX(1);
       transform-origin: left;
     }
   }
+
+  //hover des pictos
+
+  .hover-picto {
+    &:hover {
+      background: -moz-linear-gradient(45deg, #37E5B4, #CA10D7);
+
+    }
+  }
+
+  //H1 responsive
   h1 {
-    font-size: "Raleway", sans-serif;
     font-weight: $semibold;
     color: $white;
     font-size: 3em;
@@ -66,6 +90,35 @@ body {
     @media screen and (max-width: $bp-tablet) {
       font-size: 18px;
       text-align: center;
+    }
+  }
+
+  //H2 responsive
+  h2 {
+    font-weight: $bold;
+    color: $white;
+    font-size: 70px;
+    text-transform: uppercase;
+    @media screen and (max-width: $bp-desk-medium) {
+      font-size: 50px;
+    }
+    @media screen and (max-width: $bp-tablet) {
+      font-size: 30px;
+    }
+  }
+
+  //H3 responsive
+  h3 {
+    font-weight: $normal;
+    color: $white;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 0;
+    @media screen and (max-width: $bp-desk-medium) {
+      font-size: 20px;
+    }
+    @media screen and (max-width: $bp-tablet) {
+      font-size: 18px;
     }
   }
 }

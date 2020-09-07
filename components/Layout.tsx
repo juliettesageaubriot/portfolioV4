@@ -49,12 +49,12 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
         <ul className="header__right">
           <li>
             <Link href="/">
-              <a className="up hover-font">Contact</a>
+              <a className="up hover-line">Contact</a>
             </Link>
           </li>
           <li>
             <Link href="/">
-              <a className="up hover-font">About</a>
+              <a className="up hover-line">About</a>
             </Link>
           </li>
           <li>
@@ -73,17 +73,17 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
       <div className="footer footer_content">
         <div className="footer__mentions">
           <ul>
-            <li>© Juliette SAGE—AUBRIOT 2020</li>
-            <li>All rights reserved</li>
-            <li><Link href="#"><a className="hover-font">Mentions légales</a></Link></li>
+            <li>© Juliette SAGE—AUBRIOT 2020 <span>-</span></li>
+            <li>All rights reserved <span>-</span></li>
+            <li><Link href="#"><a className="hover-line">Mentions légales</a></Link></li>
           </ul>
         </div>
         <div className="footer__medias">
           <ul>
-            <li><Link href="#"><a className="up hover-font"><i className="fab fa-github"></i></a></Link></li>
-            <li><Link href="#"><a className="up hover-font">2</a></Link></li>
-            <li><Link href="#"><a className="up hover-font">3</a></Link></li>
-            <li><Link href="#"><a className="up hover-font">4</a></Link></li>
+            <li><Link href="#" ><a className="hover-picto"><i className="fab fa-github"></i></a></Link></li>
+            <li><Link href="#"><a><i className="fab fa-github"></i></a></Link></li>
+            <li><Link href="#"><a><i className="fab fa-twitter"></i></a></Link></li>
+            <li><Link href="#"><a><i className="fab fa-twitter"></i></a></Link></li>
           </ul>
         </div>
       </div>

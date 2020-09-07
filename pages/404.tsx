@@ -1,10 +1,11 @@
 import React from 'react';
 import Slider from "../components/structure/Slider";
 import { SliderWord } from '../interfaces/SliderInterface';
+import Link from 'next/link'
 
 export default function Custom404() {
 
-  const words:SliderWord[] = [
+  const words: SliderWord[] = [
     {
       label: "Are you lost ?",
       gradient: true
@@ -29,8 +30,10 @@ export default function Custom404() {
             fontSize={4}
             words={words}
           />
-          <a href="/" className="link link_homepage btn"
-          >Return to the homepage</a>
+          <Link href="/">
+            <a className="link link_homepage btn">Return to the homepage</a>
+          </Link>
+
         </div>
       </div>
     </section>
