@@ -1,5 +1,5 @@
 // import App from "next/app";
-import Layout from '../components/Layout'
+import Layout from '../components/0_structure/Layout'
 
 import type { AppProps /*, AppContext */ } from 'next/app'
 import "../assets/_basic.scss"

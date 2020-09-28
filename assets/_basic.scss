@@ -3,18 +3,23 @@
 @import "_variables.scss";
 @import "_reset.scss";
 @import "_svg.scss";
-@import "blob.scss";
-@import "menu.scss";
 
 //Structure
 @import "structure/header.scss";
 @import "structure/footer.scss";
-@import "structure/404.scss";
 @import "structure/slider.scss";
+@import "structure/menu.scss";
+
+//Pages
+@import "pages/404.scss";
 
 //Homepage
-@import "homepage/section-welcome.scss";
-@import "homepage/section-projects.scss";
+@import "components/homepage/section-welcome.scss";
+@import "components/homepage/section-projects.scss";
+
+//About 
+@import "components/about/section-about.scss";
+
 
 * {
   box-sizing: border-box;

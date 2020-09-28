@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { SliderWord } from '../../interfaces/SliderInterface'
-import Slider from "../structure/Slider"
+import Slider from "./Slider"
 
 /**
  * Pour le type de sliderArray tu as 2 façon de faire :

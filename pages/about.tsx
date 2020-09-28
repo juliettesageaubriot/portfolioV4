@@ -1,16 +1,107 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import React from "react";
+
+const skills = [
+  "React / NextJS",
+  "Unity / ShaderGraph",
+  "Twig",
+  "Wordpress",
+  "HTML / CSS / SCSS / JS",
+  "Agile & Scrum",
+  "UX & UI Design"
+]
+
+const coming = [
+  "VueJS / NuxtJS",
+  "ThreeJS",
+  "C#"
+]
+
+const experiences = [
+  {
+    name: "Since September 2019 - in alternation <br/> Front-End developer & Creative coder <br/>",
+    link_name: "@GOTOANDBUZZ",
+    link: "https://gotoandbuzz.com/"
+  },
+  {
+    name: "Since Mars to June 2019 - in internship <br/> UX/UI Designer & developer <br/>",
+    link_name: "@OneFIT Medical",
+    link: "http://www.onefit-medical.com/"
+  }
+]
+
+const formations = [
+  {
+    name: "For September 2020 <br/> Master Design & Management of Interactive Innovation <br/>",
+    link_name: "@Gobelins Paris",
+    link: "https://www.gobelins.fr/"
+  },
+  {
+    name: "Since September 2019 <br/> Bachelor Interactive Designer & Developer <br/>",
+    link_name: "@Gobelins Paris",
+    link: "https://www.gobelins.fr/"
+  },
+  {
+    name: "2017 - 2019 <br/> DUT Métiers du Multimédia et de l’Internet <br/>",
+    link_name: "@MMI Montbéliard",
+    link: "http://mmimontbeliard.com/"
+  }
+]
 
 const AboutPage = () => (
-  <Layout title="About | Next.js + TypeScript Example">
-    <h1>About</h1>
-    <p>This is the about page</p>
-    <p>
-      <Link href="/">
-        <a>Go home</a>
-      </Link>
-    </p>
-  </Layout>
+  <section id='sectionAbout' className='section section_about' data-template='sectionAbout'>
+    <div className="wrapp">
+      <div>
+        <p>Hi, I’m Juliette SAGE—AUBRIOT, a french Front-End Developer currently studying at Gobelins Paris school. I’m working at GotoAndBuzz like Front-End developer and Creative Coder.</p>``
+          <ul>
+          <h2>Experiences</h2>
+          {experiences.map((exp, i) => {
+            return (
+              <li key={i}>
+                <span dangerouslySetInnerHTML={{ __html: exp.name }}></span>
+                <a href={`${exp.link}`}>{exp.link_name}</a>
+              </li>
+            )
+          })}
+        </ul>
+        <ul>
+          <h2>Formations</h2>
+          {formations.map((form, i) => {
+            return (
+              <li key={i}>
+                <span dangerouslySetInnerHTML={{ __html: form.name }}></span>
+                <a href={`${form.link}`}>{form.link_name}</a>
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+
+      <div>
+
+      </div>
+
+      <div>
+        <ul>
+          <h2>Skills</h2>
+          {skills.map((skill, i) => {
+            return (
+              <li key={i}>{skill}</li>
+            )
+          })}
+        </ul>
+
+
+        <ul>
+          <h2>Skills in coming</h2>
+          {coming.map((coming, i) => {
+            return (
+              <li key={i}>{coming}</li>
+            )
+          })}
+        </ul>
+      </div>
+    </div>
+  </section>
 )
 
 export default AboutPage

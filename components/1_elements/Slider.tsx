@@ -28,9 +28,9 @@ const Slider = ({ opacity, vertical, fontSize, words }: SliderProps) => {
     <div id="slider" className="slider"
       style={style}>
       <div className="scroll text1" >
-        
-        {textStrip}
+
         {/* Le clone */}
+        {textStrip}
         {textStrip}
         {textStrip}
         {textStrip}

@@ -1,5 +1,5 @@
-import Welcome from '../components/homepage/Welcome'
-import Projects from "../components/homepage/Projects";
+import Welcome from '../components/1_elements/Welcome'
+import Projects from "../components/1_elements/Projects";
 
 const IndexPage = () => (
 

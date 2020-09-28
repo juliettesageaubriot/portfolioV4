@@ -1,5 +1,5 @@
 import React from 'react';
-import Slider from "../components/structure/Slider";
+import Slider from "../components/1_elements/Slider";
 import { SliderWord } from '../interfaces/SliderInterface';
 import Link from 'next/link'
 
