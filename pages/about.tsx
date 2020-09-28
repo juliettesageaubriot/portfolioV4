@@ -1,4 +1,6 @@
 import React from "react";
+import Slider from '../components/1_elements/Slider';
+import { SliderWord } from '../interfaces/SliderInterface';
 
 const skills = [
   "React / NextJS",
@@ -47,11 +49,22 @@ const formations = [
   }
 ]
 
+const sliderArray: SliderWord[] = [
+  {
+    label: 'GOTOANDBUZZ',
+    gradient: true
+  },
+  {
+    label: 'Gobelins Paris',
+    gradient: false
+  }
+]
+
 const AboutPage = () => (
   <section id='sectionAbout' className='section section_about' data-template='sectionAbout'>
     <div className="wrapp">
-      <div>
-        <p>Hi, I’m Juliette SAGE—AUBRIOT, a french Front-End Developer currently studying at Gobelins Paris school. I’m working at GotoAndBuzz like Front-End developer and Creative Coder.</p>``
+      <div className="col">
+        <p>Hi, I’m Juliette SAGE—AUBRIOT, a french Front-End Developer currently studying at Gobelins Paris school. I’m working at GotoAndBuzz like Front-End developer and Creative Coder.</p>
           <ul>
           <h2>Experiences</h2>
           {experiences.map((exp, i) => {
@@ -76,11 +89,17 @@ const AboutPage = () => (
         </ul>
       </div>
 
-      <div>
+      <div className="col col-2">
 
+      <Slider
+            opacity={0.3}
+            vertical={0}
+            fontSize={5}
+            words={sliderArray}
+          />
       </div>
 
-      <div>
+      <div className="col">
         <ul>
           <h2>Skills</h2>
           {skills.map((skill, i) => {
@@ -89,7 +108,6 @@ const AboutPage = () => (
             )
           })}
         </ul>
-
 
         <ul>
           <h2>Skills in coming</h2>

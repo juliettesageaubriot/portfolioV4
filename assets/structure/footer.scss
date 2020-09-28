@@ -1,6 +1,7 @@
 [data-template="sectionFooter"] {
   position: relative;
   padding: 10px 0;
+  background-color: $black;
   &:before {
     content: "";
     position: absolute;

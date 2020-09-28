@@ -1,3 +1,19 @@
 [data-template="sectionAbout"] {
-  
+  .wrapp {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+
+    .col {
+      width: calc(100% / 3);
+      &-2 {
+        background-color: red;
+        transform: rotate(90deg);
+      }
+    }
+  }
 }
