@@ -1,6 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
 
+import "../../assets/structure/footer.scss"
+
 const Footer = () => (
 
   <footer id="mainFooter" className="section section_footer" data-template="sectionFooter">
