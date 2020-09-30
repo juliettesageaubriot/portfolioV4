@@ -1,5 +1,6 @@
 // import App from "next/app";
 import Layout from '../components/0_structure/Layout'
+import WebFont from "../components/0_structure/Fonts";
 
 import type { AppProps /*, AppContext */ } from 'next/app'
 import "../assets/_basic.scss"
@@ -7,6 +8,7 @@ import "../assets/_basic.scss"
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Layout title="Juliette SAGE--AUBRIOT's portfolio">
+      <WebFont />
       <Component {...pageProps} />
     </Layout>
   )
