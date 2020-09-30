@@ -1,6 +1,8 @@
 import * as React from 'react'
 import Link from 'next/link'
 
+import "../../assets/components/homepage/section-projects.scss"
+
 const Projects = ({ }) => (
   <section id='sectionProjects' className='section section_projects' data-template='sectionProjects'>
     <div className="projects_wrap">

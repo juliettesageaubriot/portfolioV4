@@ -1,6 +1,8 @@
 import * as React from 'react'
 import { SliderProps } from '../../interfaces/SliderInterface';
 
+import "../../assets/structure/slider.scss"
+
 const Slider = ({ opacity, vertical, fontSize, words }: SliderProps) => {
   const style = {
     opacity: opacity,

@@ -1,3 +1,4 @@
+// @ts-ignore
 import WebFont from "webfontloader/webfontloader";
 
 // WebFont.load({

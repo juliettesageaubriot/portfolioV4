@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { SliderWord } from '../../interfaces/SliderInterface'
 import Slider from "./Slider"
+import "../../assets/components/homepage/section-welcome.scss"
 
 /**
  * Pour le type de sliderArray tu as 2 façon de faire :

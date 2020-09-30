@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from '../components/1_elements/Slider';
 import { SliderWord } from '../interfaces/SliderInterface';
+import "../assets/pages/about.scss";
 
 const skills = [
   "React / NextJS",

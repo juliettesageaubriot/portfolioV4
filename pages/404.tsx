@@ -2,6 +2,7 @@ import React from 'react';
 import Slider from "../components/1_elements/Slider";
 import { SliderWord } from '../interfaces/SliderInterface';
 import Link from 'next/link'
+import "../assets/pages/404.scss"
 
 export default function Custom404() {
 

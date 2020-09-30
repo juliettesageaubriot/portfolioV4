@@ -1,6 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
 
+import "../../assets/structure/header.scss"
+
 const menuItems = [
   {
     name: "Contact",
