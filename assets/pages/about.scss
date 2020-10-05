@@ -59,12 +59,12 @@
       }
     }
   }
-}
-.slider {
-  display: none;
-  @media screen and(min-width: $bp-tablet) {
-    display: block;
-    position: absolute;
-    top: 0;
+  .slider {
+    display: none;
+    @media screen and(min-width: $bp-tablet) {
+      display: block;
+      position: absolute;
+      top: 0;
+    }
   }
 }
