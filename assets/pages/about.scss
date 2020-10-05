@@ -6,65 +6,91 @@
   overflow: hidden;
   .wrapp {
     padding: 30px 0;
-    .intro {
-      display: flex;
-      flex-flow: row nowrap;
-      align-items: center;
-      .col {
-        width: calc(100% / 3);
-      }
+    .wrapp-inner {
+      .intro {
+        @media screen and(min-width: $bp-tablet) {
+          display: flex;
+          flex-flow: row nowrap;
+          align-items: center;
+        }
+        .col {
+          width: 100%;
+          @media screen and(min-width: $bp-tablet) {
+            width: calc(100% / 3);
+          }
+        }
 
-      &-paragraph {
-        font-size: 20px;
-        max-width: 400px;
-      }
-      &-image {
-        width: 250px;
-        height: 250px;
-        background-color: purple;
-      }
-    }
-  }
-}
-
-.inner {
-  @media screen and(min-width: $bp-tablet) {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-  }
-
-  .col {
-    width: calc(100% / 3);
-    h2 {
-      font-size: 35px;
-    }
-
-    li {
-      list-style: none;
-      span {
-        font-size: 16px;
-      }
-      a {
-      }
-    }
-    &-1 {
-      .list {
-        &-experience,
-        &-formations {
-          li {
-            margin: 15px 0;
+        &-paragraph {
+          font-size: 18px;
+          width: 100%;
+          @media screen and(min-width: $bp-tablet) {
+            max-width: 400px;
+            font-size: 20px;
+          }
+        }
+        &-image {
+          display: none;
+          @media screen and(min-width: $bp-tablet) {
+            display: block;
+            width: 250px;
+            height: 250px;
+            background-color: purple;
           }
         }
       }
     }
   }
-  .slider {
-    display: none;
+
+  .inner {
     @media screen and(min-width: $bp-tablet) {
-      display: block;
-      position: absolute;
-      top: 0;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+    }
+
+    .col {
+      width: 100%;
+      @media screen and(min-width: $bp-tablet) {
+        width: calc(100% / 3);
+      }
+      h2 {
+        font-size: 28px;
+        font-weight: $bold;
+        @media screen and(min-width: $bp-tablet) {
+          font-size: 35px;
+        }
+      }
+
+      ul {
+        margin-top: 50px;
+
+        li {
+          list-style: none;
+          span {
+            font-size: 16px;
+          }
+          a {
+          }
+        }
+      }
+      &-1 {
+        .list {
+          &-experience,
+          &-formations {
+            li {
+              margin: 15px 0;
+            }
+          }
+        }
+      }
+    }
+    .slider {
+      display: none;
+      @media screen and(min-width: $bp-tablet) {
+        display: block;
+        position: absolute;
+        top: 0;
+      }
     }
   }
 }

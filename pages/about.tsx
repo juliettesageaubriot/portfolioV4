@@ -70,82 +70,88 @@ const sliderArray: SliderWord[] = [
   {
     label: 'Photo',
     gradient: true
+  },
+  {
+    label: 'Cats',
+    gradient: false
   }
 ]
 
 const AboutPage = () => (
   <section id='sectionAbout' className='section section_about' data-template='sectionAbout'>
     <div className="wrapp">
-      <div className="intro">
-        <div className="col">
-          <p className="intro-paragraph">Hi, I’m <strong>Juliette SAGE—AUBRIOT</strong>, a french <strong>Front-End Developer</strong> currently studying at <strong>Gobelins Paris school</strong>. I’m working at <strong>GOTOANDBUZZ</strong> like Front-End developer and Creative Coder.</p>
-        </div>
-        <div className="col"></div>
-        <div className="col">
-          <div className="intro-image">
-            <img src="" />
+      <div className="wrapp-inner">
+        <div className="intro">
+          <div className="col">
+            <p className="intro-paragraph">Hi, I’m <strong>Juliette SAGE—AUBRIOT</strong>, a french <strong>Front-End Developer</strong> currently studying at <a href="https://www.gobelins.fr/"><strong>Gobelins Paris school</strong></a>. I’m working at <a href="https://gotoandbuzz.com/"><strong>GOTOANDBUZZ</strong></a> like Front-End developer and Creative Coder.</p>
+          </div>
+          <div className="col"></div>
+          <div className="col">
+            <div className="intro-image">
+              <img src="" />
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div className="inner">
-      <div className="col col-1">
-        <ul className="list-experience">
-          <h2>Experiences</h2>
-          {experiences.map((exp, i) => {
-            return (
-              <li key={i}>
-                <span dangerouslySetInnerHTML={{ __html: exp.name }}></span>
-                <a href={`${exp.link}`}>{exp.link_name}</a>
-              </li>
-            )
-          })}
-        </ul>
-        <ul className="list-formations">
-          <h2>Formations</h2>
-          {formations.map((form, i) => {
-            return (
-              <li key={i}>
-                <span dangerouslySetInnerHTML={{ __html: form.name }}></span>
-                <a href={`${form.link}`}><strong>{form.link_name}</strong></a>
-              </li>
-            )
-          })}
-        </ul>
+      <div className="inner">
+        <div className="col col-1">
+          <ul className="list-experience">
+            <h2>Experiences</h2>
+            {experiences.map((exp, i) => {
+              return (
+                <li key={i}>
+                  <span dangerouslySetInnerHTML={{ __html: exp.name }}></span>
+                  <a href={`${exp.link}`}>{exp.link_name}</a>
+                </li>
+              )
+            })}
+          </ul>
+          <ul className="list-formations">
+            <h2>Formations</h2>
+            {formations.map((form, i) => {
+              return (
+                <li key={i}>
+                  <span dangerouslySetInnerHTML={{ __html: form.name }}></span>
+                  <a href={`${form.link}`}><strong>{form.link_name}</strong></a>
+                </li>
+              )
+            })}
+          </ul>
+        </div>
+
+        <div className="col col-2">
+          {/* slider place */}
+        </div>
+
+        <div className="col col-3">
+          <ul>
+            <h2>Skills</h2>
+            {skills.map((skill, i) => {
+              return (
+                <li key={i}>{skill}</li>
+              )
+            })}
+          </ul>
+
+          <ul>
+            <h2>Skills in coming</h2>
+            {coming.map((coming, i) => {
+              return (
+                <li key={i}>{coming}</li>
+              )
+            })}
+          </ul>
+        </div>
+
+
+        <Slider
+          opacity={0.3}
+          vertical={90}
+          fontSize={4}
+          words={sliderArray}
+        />
       </div>
-
-      <div className="col col-2">
-        {/* slider place */}
-      </div>
-
-      <div className="col col-3">
-        <ul>
-          <h2>Skills</h2>
-          {skills.map((skill, i) => {
-            return (
-              <li key={i}>{skill}</li>
-            )
-          })}
-        </ul>
-
-        <ul>
-          <h2>Skills in coming</h2>
-          {coming.map((coming, i) => {
-            return (
-              <li key={i}>{coming}</li>
-            )
-          })}
-        </ul>
-      </div>
-
-
-      <Slider
-        opacity={0.3}
-        vertical={90}
-        fontSize={4}
-        words={sliderArray}
-      />
     </div>
   </section>
 )
