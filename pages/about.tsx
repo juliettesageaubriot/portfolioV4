@@ -31,6 +31,7 @@ const experiences = [
     link: "http://www.onefit-medical.com/"
   }
 ]
+
 const formations = [
   {
     name: "For September 2020 <br/> Master Design & Management of Interactive Innovation <br/>",
