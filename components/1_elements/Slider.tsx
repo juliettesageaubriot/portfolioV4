@@ -5,21 +5,10 @@ import "../../assets/structure/slider.scss"
 
 const Slider = ({ opacity, vertical, fontSize, words }: SliderProps) => {
 
-  // let name;
-  // switch (vertical) {
-  //   case 0:
-  //     name = "width";
-  //     break;
-  //   case 90:
-  //     name = "height";
-  //     break;
-  // }
-
   const style = {
     opacity: opacity,
     transform: `rotate(${vertical}deg)`,
     fontSize: fontSize + 'em',
-    // name: "100%"
   }
 
   /**
