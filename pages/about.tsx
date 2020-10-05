@@ -52,21 +52,46 @@ const formations = [
 
 const sliderArray: SliderWord[] = [
   {
-    label: 'GOTOANDBUZZ',
+    label: 'Curious',
     gradient: true
   },
   {
-    label: 'Gobelins Paris',
+    label: 'Creative',
     gradient: false
+  },
+  {
+    label: 'Gamer',
+    gradient: true
+  },
+  {
+    label: 'Drawing',
+    gradient: false
+  },
+  {
+    label: 'Photo',
+    gradient: true
   }
 ]
 
 const AboutPage = () => (
   <section id='sectionAbout' className='section section_about' data-template='sectionAbout'>
     <div className="wrapp">
-      <div className="col">
-        <p>Hi, I’m Juliette SAGE—AUBRIOT, a french Front-End Developer currently studying at Gobelins Paris school. I’m working at GotoAndBuzz like Front-End developer and Creative Coder.</p>
-          <ul>
+      <div className="intro">
+        <div className="col">
+          <p className="intro-paragraph">Hi, I’m <strong>Juliette SAGE—AUBRIOT</strong>, a french <strong>Front-End Developer</strong> currently studying at <strong>Gobelins Paris school</strong>. I’m working at <strong>GOTOANDBUZZ</strong> like Front-End developer and Creative Coder.</p>
+        </div>
+        <div className="col"></div>
+        <div className="col">
+          <div className="intro-image">
+            <img src="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div className="inner">
+      <div className="col col-1">
+        <ul className="list-experience">
           <h2>Experiences</h2>
           {experiences.map((exp, i) => {
             return (
@@ -77,13 +102,13 @@ const AboutPage = () => (
             )
           })}
         </ul>
-        <ul>
+        <ul className="list-formations">
           <h2>Formations</h2>
           {formations.map((form, i) => {
             return (
               <li key={i}>
                 <span dangerouslySetInnerHTML={{ __html: form.name }}></span>
-                <a href={`${form.link}`}>{form.link_name}</a>
+                <a href={`${form.link}`}><strong>{form.link_name}</strong></a>
               </li>
             )
           })}
@@ -91,16 +116,10 @@ const AboutPage = () => (
       </div>
 
       <div className="col col-2">
-
-      <Slider
-            opacity={0.3}
-            vertical={0}
-            fontSize={5}
-            words={sliderArray}
-          />
+        {/* slider place */}
       </div>
 
-      <div className="col">
+      <div className="col col-3">
         <ul>
           <h2>Skills</h2>
           {skills.map((skill, i) => {
@@ -119,6 +138,14 @@ const AboutPage = () => (
           })}
         </ul>
       </div>
+
+
+      <Slider
+        opacity={0.3}
+        vertical={90}
+        fontSize={4}
+        words={sliderArray}
+      />
     </div>
   </section>
 )

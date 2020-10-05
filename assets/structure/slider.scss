@@ -1,7 +1,7 @@
 @import "../variables";
 
 #slider {
-  width: 100%;
+  // width: 100%;
   overflow: hidden;
 
   @media screen and (max-width: $bp-desk-medium) {
@@ -16,7 +16,7 @@
       font-family: "Raleway", sans-serif;
       -webkit-text-stroke: 1px white;
       color: transparent;
-      font-weight: $bold;
+      font-weight: $normal;
       text-transform: uppercase;
       white-space: nowrap;
       animation: animate 40s linear infinite;
