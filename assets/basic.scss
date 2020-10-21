@@ -36,7 +36,7 @@ html {
     // margin: 20px 30px;
   }
   &.own-html {
-    &:not(.wf-active) {
+    &.wf-active {
       .loader {
         opacity: 0;
         pointer-events: none;
