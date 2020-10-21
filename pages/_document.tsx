@@ -5,8 +5,8 @@ import Document, { Head, Main, NextScript } from "next/document";
 // import SvgSprite from "../modules/shared/structure/SpriteSvg";
 // import {  useState } from "react";
 
-class OwnDocument extends Document<{ lang; lang_code }> {
-  static async getInitialProps(ctx) {
+class OwnDocument extends Document<{ lang:any; lang_code:any }> {
+  static async getInitialProps(ctx:any) {
     const additionalProps = { lang: null, lang_code: null };
     const initialProps = await Document.getInitialProps(ctx);
 
