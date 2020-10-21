@@ -2,6 +2,7 @@
   "name": "with-typescript",
   "version": "1.0.0",
   "scripts": {
+    "local": "NODE_ENV=localhost next dev -p ${NODE_PORT:-3023}",
     "dev": "next",
     "build": "next build",
     "start": "next start",

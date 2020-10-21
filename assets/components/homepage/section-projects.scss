@@ -1,4 +1,4 @@
-@import "../../variables";
+@import "../../_mandatory";
 
 [data-template="sectionProjects"] {
   margin: 50px 0;
@@ -15,7 +15,6 @@
           list-style: none;
           background-color: $dark-grey;
           width: calc((100% / 3) - 20px);
-          margin: 10px;
           padding: 20px;
 
           @media screen and (max-width: $bp-tablet) {
