@@ -73,6 +73,24 @@
           color: $white;
           font-weight: $normal;
           font-size: 18px;
+          transition: .5s ease-in-out all;
+
+          //Dans le header, link selected
+          &.selected {
+            color: $blue;
+            font-weight: $bold;
+            transition: .5s ease-in-out all;
+            &:before {
+              position: absolute;
+              content: "";
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 2px;
+              background: $blue;
+              transition: .5s ease-in-out all;
+            }
+          }
         }
         &:last-child {
           margin: 0px;
