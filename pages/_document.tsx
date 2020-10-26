@@ -1,7 +1,7 @@
 // _document is only rendered on the server side and not on the client side
 // Event handlers like onClick can't be added to this file
 
-import Document, { Head, Main, NextScript } from "next/document";
+import Document, { Html, Head, Main, NextScript } from "next/document";
 // import SvgSprite from "../modules/shared/structure/SpriteSvg";
 // import {  useState } from "react";
 
@@ -15,7 +15,7 @@ class OwnDocument extends Document<{ lang:any; lang_code:any }> {
 
   render() {
     return (
-      <html lang="fr" className={`own-html`} data-lang="fr_FR">
+      <Html lang="fr" className={`own-html`} data-lang="fr_FR">
         <Head>{ /* <title>{title}</title> <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" /> <GTMHead GTMId="GTM-XXXXXX" /> */}</Head>
         <body id="bodySite">
@@ -26,7 +26,7 @@ class OwnDocument extends Document<{ lang:any; lang_code:any }> {
           <NextScript />
           {/* <SvgSprite /> */}
         </body>
-      </html>
+      </Html>
     );
   }
 }

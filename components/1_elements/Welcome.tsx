@@ -1,6 +1,8 @@
-import * as React from 'react'
-import { SliderWord } from '../../interfaces/SliderInterface'
-import Slider from "./Slider"
+import React, { useState, useEffect } from 'react';
+import { SliderWord } from '../../interfaces/SliderInterface';
+import Slider from "./Slider";
+import client from '../../pages/client';
+
 import "../../assets/components/homepage/section-welcome.scss"
 
 /**
@@ -34,13 +36,25 @@ const sliderBackground: SliderWord[] = [
 ]
 
 
-const Welcome = ({ }) => (
+const Welcome = ({ }) => {
+  const [homePage, SetHomePage] = useState([])
+
+  useEffect(() => {
+    client.getEntries({
+      "content_type": "homePage"
+    }).then((entries: any) => {
+      SetHomePage(entries.items[0])
+    })
+  })
+
+
+return (
   <section id='sectionWelcome' className='section section_welcome' data-template='sectionWelcome'>
     <div className="wrapp">
       <div className="wrapp_content">
         <div className="col col_1">
           <div className="col__name">
-            <h1 className="up">Juliette Sage--Aubriot</h1>
+            <h1 className="up">{homePage}</h1>
             <Slider
               opacity={1}
               vertical={0}
@@ -64,5 +78,6 @@ const Welcome = ({ }) => (
     </div>
   </section>
 )
+}
 
 export default Welcome

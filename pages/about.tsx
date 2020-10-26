@@ -83,7 +83,7 @@ const AboutPage = () => (
       <div className="wrapp-inner">
         <div className="intro">
           <div className="col">
-            <p className="intro-paragraph">Hi, I’m <strong>Juliette SAGE—AUBRIOT</strong>, a french <strong>Front-End Developer</strong> currently studying at <a href="https://www.gobelins.fr/"><strong>Gobelins Paris school</strong></a>. I’m working at <a href="https://gotoandbuzz.com/"><strong>GOTOANDBUZZ</strong></a> like Front-End developer and Creative Coder.</p>
+            <p className="intro-paragraph">Hi, I’m <strong>Juliette SAGE-&nbsp;-AUBRIOT</strong>, a french <strong>Front-End Developer</strong> currently studying at <a href="https://www.gobelins.fr/"><strong>Gobelins Paris school</strong></a>. I’m working at <a href="https://gotoandbuzz.com/"><strong>GOTOANDBUZZ</strong></a> like Front-End developer and Creative Coder.</p>
           </div>
           <div className="col"></div>
           <div className="col">
